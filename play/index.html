@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tangkap FlowChart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+  </head>
+  <body>
+    <nav class="menu" id="menu">
+      <a class="score">Score : <i id="score">0</i> point</a>
+      <a class="time">Waktu : <i id="countdown">30</i> detik</a>
+    </nav>
+    <div id="flowchartImage" class="gamePlay">
+      <img id="flowchart1" class="flowchart" src="../assets/images/alir.png" />
+      <img
+        id="flowchart2"
+        class="flowchart"
+        src="../assets/images/terminal.png"
+      />
+      <img
+        id="flowchart3"
+        class="flowchart"
+        src="../assets/images/prepro.png"
+      />
+      <img
+        id="flowchart4"
+        class="flowchart"
+        src="/assets/images/preparation.png"
+      />
+      <img
+        id="flowchart5"
+        class="flowchart"
+        src="../assets/images/inputoutput.png"
+      />
+    </div>
+    <div id="restart" class="containerRestart">
+      <h1 class="title">Tangkap FlowChart</h1>
+      <h3 class="endPoint">Score : <i id="endPoint"> 0</i> Points</h3>
+      <a href="/play" class="main"
+        ><div><i data-feather="refresh-cw"></i></div
+      ></a>
+      <a href="/" class="main"
+        ><div><i data-feather="log-in"></i></div
+      ></a>
+    </div>
+
+    <audio
+      id="correctSound"
+      src="../assets/sounds/correctSound.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="wrongSound"
+      src="../assets/sounds/wrong-sound.mp3"
+      preload="auto"
+    ></audio>
+    <script>
+      feather.replace();
+    </script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

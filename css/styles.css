@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+body {
+  background: url(../assets/images/rabbit-alone-minimal-forest-4k-d0.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Orbitron", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(0, 0, 0, 0.85);
+  border-bottom: 2px solid #0ff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+}
+
+.menu .score,
+.menu .time {
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: #0ff;
+  padding: 0 1.5rem;
+}
+
+.menu a i {
+  font-style: normal;
+  color: #0ff;
+}
+
+/* Play Menu */
+.container,
+.containerRestart {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 400px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.85);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container .title,
+.containerRestart .title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #0ff;
+  border-bottom: 2px solid #0ff;
+  padding-bottom: 0.5rem;
+}
+
+.container .main,
+.containerRestart .main {
+  display: inline-block;
+  transition: all 0.3s;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  background: linear-gradient(45deg, #0ff, #00f);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.5);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.container .main:hover,
+.containerRestart .main:hover {
+  background: linear-gradient(45deg, #00f, #0ff);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.6);
+}
+
+.containerRestart {
+  display: none;
+}
+
+.containerRestart .endPoint {
+  color: #0ff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.containerRestart .endPoint i {
+  font-style: normal;
+}
+
+/* Game Play */
+.gamePlay img {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gamePlay img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .container,
+  .containerRestart {
+    max-width: 300px;
+  }
+
+  .gamePlay img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .container,
+  .containerRestart {
+    padding: 2rem;
+    max-width: 280px;
+  }
+
+  .container .title,
+  .containerRestart .title {
+    font-size: 1.5rem;
+  }
+
+  .gamePlay img {
+    width: 100px;
+    height: 100px;
+  }
+}
