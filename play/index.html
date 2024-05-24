@@ -39,12 +39,12 @@
     <div id="restart" class="containerRestart">
       <h1 class="title">Tangkap FlowChart</h1>
       <h3 class="endPoint">Score : <i id="endPoint"> 0</i> Points</h3>
-      <a href="/play" class="main"
-        ><div><i data-feather="refresh-cw"></i></div
-      ></a>
-      <a href="/" class="main"
-        ><div><i data-feather="log-in"></i></div
-      ></a>
+      <button onclick="startGame()" class="main">
+        <i data-feather="refresh-cw"></i>
+      </button>
+      <button onclick="backMainMenu()" class="main">
+        <i data-feather="log-in"></i>
+      </button>
     </div>
 
     <audio
@@ -54,7 +54,12 @@
     ></audio>
     <audio
       id="wrongSound"
-      src="../assets/sounds/wrong-sound.mp3"
+      src="../assets/sounds/wrongSound.wav"
+      preload="auto"
+    ></audio>
+    <audio
+      id="playSound"
+      src="../assets/sounds/hoverSound.mp3"
       preload="auto"
     ></audio>
     <script>

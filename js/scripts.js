@@ -116,8 +116,16 @@ function countdown() {
 
 function startGame() {
   // Memutar suara saat tombol play ditekan
+  playSound.currentTime = 0;
   playSound.play();
   let url = "/play";
+  window.location.href = url;
+}
+
+function backMainMenu() {
+  playSound.currentTime = 0;
+  playSound.play();
+  let url = "/";
   window.location.href = url;
 }
 
